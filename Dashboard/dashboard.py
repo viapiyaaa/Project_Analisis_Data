@@ -60,7 +60,9 @@ st.header('📊 Bicycle Distribution Dashboard')
 with st.sidebar:
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.image("logo.jpg")
+        BASE_DIR = os.path.dirname(__file__)
+        logo_path = os.path.join(BASE_DIR, 'logo.jpg')
+        img = Image.open(logo_path)
         
         # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
