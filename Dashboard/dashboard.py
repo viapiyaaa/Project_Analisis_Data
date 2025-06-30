@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+from PIL import Image
 
 import os
 current_dir = os.path.dirname(__file__)
