@@ -8,7 +8,9 @@ current_dir = os.path.dirname(__file__)
 csv_path = os.path.join(current_dir, "day_data.csv")
 day_df = pd.read_csv(csv_path)
 
-hour_df = pd.read_csv("hour_data.csv")
+BASE_DIR = os.path.dirname(__file__)
+file_path = os.path.join(BASE_DIR, "hour_data.csv")
+hour_df = pd.read_csv(file_path)
 
 def create_classify_day(row):
     if row["holiday"] == 1:
