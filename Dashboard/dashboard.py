@@ -3,7 +3,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-day_df = pd.read_csv("day_data.csv")
+import os
+current_dir = os.path.dirname(__file__)
+csv_path = os.path.join(current_dir, "day_data.csv")
+day_df = pd.read_csv(csv_path)
+
 hour_df = pd.read_csv("hour_data.csv")
 
 def create_classify_day(row):
